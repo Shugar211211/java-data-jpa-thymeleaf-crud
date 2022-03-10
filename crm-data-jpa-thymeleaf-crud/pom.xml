@@ -15,7 +15,7 @@
 	<description>Simple CRM</description>
 	
 	<!-- define the packaging type -->
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	
 	<properties>
 		<java.version>17</java.version>
