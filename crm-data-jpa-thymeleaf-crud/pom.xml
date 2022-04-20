@@ -15,10 +15,10 @@
 	<description>Simple CRM</description>
 	
 	<!-- define the packaging type -->
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	
 	<properties>
-		<java.version>17</java.version>
+		<java.version>11</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
