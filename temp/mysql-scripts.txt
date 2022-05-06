@@ -1,0 +1,19 @@
+# Create user
+CREATE USER 'power_user'@'localhost' IDENTIFIED BY 't111';
+GRANT ALL PRIVILEGES ON *.* TO 'power_user'@'localhost';
+
+# Create schema
+CREATE SCHEMA IF NOT EXISTS USERS;
+USE USERS;
+CREATE TABLE users_main (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  name VARCHAR(128),
+  email VARCHAR(128), 
+  password VARCHAR(128),
+  PRIMARY KEY(id)
+);
+
+# Populate schema
+INSERT INTO users_main (name, email, password) VALUES ('John Doe', 'jd@gmail.com', 't123');
+INSERT INTO users_main (name, email, password) VALUES ('Bonita Applebum', 'ba@gmail.com', 't456');
+INSERT INTO users_main (name, email, password) VALUES ('Mary Public', 'mp@gmail.com', 't789');

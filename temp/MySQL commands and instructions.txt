@@ -1,0 +1,11 @@
+CREATE TABLE users_main (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT, 
+  first_name VARCHAR(128), 
+  last_name VARCHAR(128),
+  email VARCHAR(128),
+  password VARCHAR(128),
+  PRIMARY KEY(id),
+  INDEX (email),
+  UNIQUE (email),
+  NOT_NULL (password);
+);

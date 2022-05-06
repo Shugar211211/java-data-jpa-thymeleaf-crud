@@ -1,7 +1,6 @@
-FROM adoptopenjdk/openjdk11:alpine
-RUN addgroup -S crudJava && adduser -S crudJava -G crudJava
-USER crudJava:crudJava
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} app.jar
+FROM maven:3.8.5-openjdk-11
+WORKDIR /crud-app
+COPY . .
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "/app.jar"]
+RUN mvn clean install -DskipTests
+CMD mvn spring-boot:run
