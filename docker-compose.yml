@@ -33,8 +33,7 @@ services:
       dockerfile: Dockerfile.jar-ready
     container_name: crud-app
     depends_on:
-      database:
-        condition: "service_started"
+      - database
     ports:
       - $SPRING_LOCAL_PORT:$SPRING_DOCKER_PORT
     environment:
